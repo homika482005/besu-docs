@@ -10,6 +10,13 @@ Use the [`--nat-method`](../../reference/cli/options.md#nat-method) option to sp
 
 The [enode](../../concepts/node-keys.md#enode-url) advertised to other nodes during discovery is the external IP address and port. The [`admin_nodeInfo`](../../reference/api/index.md#admin_nodeinfo) JSON-RPC API method returns the external address and port for the `enode` and `listenAddr` properties.
 
+For IPv6 support, admin_nodeInfo also returns:
+
+- ipv6 — IPv6 address string
+- listenAddrV6 — IPv6 listen address as [ipv6]:port
+- ports.listenerV6 — IPv6 TCP listening port
+- ports.discoveryV6 — IPv6 UDP discovery port
+
 While Besu is running, the following are not supported:
 
 - IP address changes
