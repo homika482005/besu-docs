@@ -391,6 +391,14 @@ None
 
 - `ports`: _object_ - peer discovery and listening [ports](../../how-to/connect/configure-ports.md)
 
+ - `ipv6`: _string_ - IPv6 address string
+
+- `listenAddrV6`: _string_ - IPv6 listen address as [ipv6]:port
+
+- `listenerV6`: _number_ - IPv6 TCP listening port
+
+- `discoveryV6`: _number_ - IPv6 UDP discovery port
+
 - `protocols`: _object_ - list of objects containing information for each Ethereum sub-protocol
 
 :::note
@@ -427,11 +435,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id"
     "enode": "enode://87ec35d558352cc55cd1bf6a472557797f91287b78fe5e86760219124563450ad1bb807e4cc61e86c574189a851733227155551a14b9d0e1f62c5e11332a18a3@[::]:30303",
     "enr": "enr:-Jq4QOBEJ_aqkcth60IN44olOQ3uNsfqwEahYc6eKRfBg8ZlGbqhHTKqN_Yr67QWUA9v8_l-iaYhpd2uJC_AEQDv3agCg2V0aMrJhPxk7ASDEYwwgmlkgnY0gmlwhH8AAAGJc2VjcDI1NmsxoQK99DIR26ML8QCgAEC5-DnhcWHIjIVzAouFM8it-O0elIN0Y3CCdl-DdWRwgnZf",
     "listenAddr": "[::]:30303",
+    "ipv6": "::1",
+    "listenAddrV6": "[::1]:30303",
     "name": "besu/v26.3-develop-f2ec0fe/osx-aarch_64/oracle_openjdk-java-22",
     "id": "bdf43211dba30bf100a00040b9f839e17161c88c8573028b8533c8adf8ed1e9466e4b87d716d06292426d154d0df7acde83c3f68df151da5413224b22f049054",
     "ports": {
       "discovery": 30303,
-      "listener": 30303
+      "listener": 30303,
+      "listenerV6": 30303,
+      "discoveryV6": 30303
     },
     "protocols": {
       "eth": {
