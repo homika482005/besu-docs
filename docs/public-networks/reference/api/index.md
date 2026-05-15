@@ -389,15 +389,17 @@ None
 
 - `id`: _string_ - [node public key](../../concepts/node-keys.md#node-public-key)
 
-- `ports`: _object_ - peer discovery and listening [ports](../../how-to/connect/configure-ports.md)
 
  - `ipv6`: _string_ - IPv6 address string
 
 - `listenAddrV6`: _string_ - IPv6 listen address as [ipv6]:port
 
-- `listenerV6`: _number_ - IPv6 TCP listening port
+- `ports`: _object_ - peer discovery and listening ports
 
-- `discoveryV6`: _number_ - IPv6 UDP discovery port
+  - `listener`: _number_ - TCP listening port
+  - `discovery`: _number_ - UDP discovery port
+  - `listenerV6`: _number_ - IPv6 TCP listening port
+  - `discoveryV6`: _number_ - IPv6 UDP discovery port
 
 - `protocols`: _object_ - list of objects containing information for each Ethereum sub-protocol
 
